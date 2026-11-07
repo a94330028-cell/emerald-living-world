@@ -1,0 +1,77 @@
+/* Emerald Living World 3.0.6 — mobile UX stabilization */
+html{scroll-padding-top:88px}
+body.elw-premium{overflow-x:hidden}
+body.elw-premium::before,body.elw-premium::after{pointer-events:none!important}
+#elw-premium-topbar{background:#092221!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:0 5px 18px #00171465!important;isolation:isolate!important}
+body.elw-premium header.elw-premium-topbar:not(#elw-premium-topbar),body.elw-premium .portal-header,body.elw-premium .arenaHeader{display:none!important}
+body.elw-premium .elw-premium-heading{margin:14px auto 22px!important;max-width:1120px!important;padding:22px!important;background:#133630!important;border:1px solid #466d5b!important;box-shadow:none!important}
+body.elw-premium .elw-premium-heading:after{display:none!important}
+body.elw-premium .elw-premium-heading-content{position:relative!important;z-index:1!important}
+body.elw-premium .elw-premium-eyebrow{color:#b6f4d0!important;opacity:1!important}
+body.elw-premium .elw-premium-heading h2{color:#f2fff7!important;text-shadow:none!important}
+body.elw-premium .elw-premium-heading p{color:#d6eee1!important}
+body.elw-premium[data-elw-section=arena] .elw-premium-heading{background:#213b33!important}
+body.elw-premium[data-elw-section=frontier] .elw-premium-heading{background:#2d2940!important}
+body.elw-premium[data-elw-section=simulacao] .elw-premium-heading{background:#12383a!important}
+body.elw-premium .elw-premium-heading-actions a{background:#163e37!important;color:#f8fff9!important;border-color:#65907c!important}
+body.elw-premium .elw-premium-heading-actions a:hover{background:#25624d!important}
+body.elw-premium .elw-premium-grid{display:none!important}
+body.elw-premium .elw-premium-overview{margin-top:10px!important}
+body.elw-premium .elw-dock{background:#081f20!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:0 5px 20px #00171477!important;z-index:10030!important}
+body.elw-premium .elw-dock .elw-label{font-size:10px!important;letter-spacing:0!important}
+body.elw-premium .elw-menu{background:#102b2b!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;z-index:10029!important}
+body.elw-premium .elw-premium-topbar:not(#elw-premium-topbar) .elw-premium-action{display:none!important}
+body.elw-premium .arenaFooter{padding-bottom:30px}
+body.elw-premium .portal-main{padding-top:0!important}
+body.elw-premium .portal-hero{padding-top:32px!important}
+body.elw-premium .portal-hero .hero-copy{position:relative;z-index:1}
+body.elw-premium .art-inner{transform:none!important}
+body.elw-premium .world-card:focus-visible{outline:3px solid #9febba}
+body.elw-premium .arenaContainer{padding-top:18px!important}
+body.elw-premium .arenaHero{margin-top:0}
+body.elw-premium .arenaHero h1{color:#fff!important}
+body.elw-premium .arenaOverline{color:#a8f7cf!important}
+/* Keep the simulator's own page tabs, but never as a second fixed dock. */
+body.elw-premium[data-elw-section=simulacao] .bottomNav{
+ position:relative!important;inset:auto!important;left:auto!important;right:auto!important;bottom:auto!important;
+ transform:none!important;display:flex!important;align-items:stretch!important;justify-content:center!important;gap:4px!important;
+ width:calc(100% - 20px)!important;max-width:850px!important;margin:10px auto 18px!important;
+ min-height:55px!important;border:1px solid #426b60!important;border-radius:15px!important;
+ padding:4px!important;background:#102e30!important;box-shadow:none!important;z-index:2!important;
+}
+body.elw-premium[data-elw-section=simulacao] .bottomNav>*{flex:1;min-width:0!important;display:flex!important;flex-direction:column;gap:2px;justify-content:center;align-items:center;white-space:normal!important;font-size:11px!important;min-height:45px!important;padding:5px 2px!important;background:transparent!important;border:0!important;color:#e0f7eb!important;text-align:center!important}
+body.elw-premium[data-elw-section=simulacao] .bottomNav>[aria-selected=true]{background:#24664c!important;border-radius:10px!important;color:#fff!important}
+body.elw-premium[data-elw-section=simulacao] .navActions{position:relative!important;top:auto!important;z-index:2!important;border-radius:14px!important;margin:7px auto!important;width:calc(100% - 20px)!important;max-width:850px!important}
+body.elw-premium[data-elw-section=simulacao] .navActions input{min-width:0!important}
+body.elw-premium[data-elw-section=simulacao] .navActions button{font-size:12px!important}
+body.elw-premium[data-elw-section=simulacao] .siteNav{display:none!important}
+body.elw-premium[data-elw-section=simulacao] .pageView{padding-bottom:20px!important}
+body.elw-premium[data-elw-section=simulacao] .bottomNav #bottomMore[hidden]{display:none!important}
+/* Secondary controls must sit above, not behind, the world navigation */
+body.elw-premium .worldControlFab{bottom:calc(96px + env(safe-area-inset-bottom))!important}
+@media(max-width:700px){
+ #elw-premium-topbar{top:0!important;min-height:60px!important;padding:8px 12px!important;margin:0!important;border-radius:0!important;width:100%!important}
+ body.elw-premium .elw-brand-icon{height:39px!important;width:39px!important;font-size:24px!important}
+ body.elw-premium .elw-brand-name{font-size:12px!important;letter-spacing:.08em!important}
+ body.elw-premium .elw-premium-heading{margin:10px 12px 18px!important;padding:19px 15px!important;border-radius:18px!important}
+ body.elw-premium .elw-premium-heading h2{font-size:24px!important;line-height:1.25!important}
+ body.elw-premium .elw-premium-heading-actions{display:flex!important;gap:8px!important}
+ body.elw-premium .elw-premium-heading-actions a{min-height:45px!important}
+ body.elw-premium .elw-dock{left:8px!important;right:8px!important;bottom:calc(6px + env(safe-area-inset-bottom))!important;transform:none!important;width:auto!important;border-radius:19px!important;padding:5px 2px!important;gap:0!important;min-height:65px!important}
+ body.elw-premium .elw-dock a,body.elw-premium .elw-dock button{min-width:0!important;padding:6px 0!important}
+ body.elw-premium .elw-dock .elw-ico{font-size:21px!important;filter:none!important}
+ body.elw-premium .elw-dock .elw-label{font-size:9px!important}
+ body.elw-premium{padding-bottom:calc(98px + env(safe-area-inset-bottom))!important}
+ body.elw-premium .elw-premium-overview{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+ body.elw-premium .portal-hero{padding-top:17px!important}
+ body.elw-premium .arenaContainer{padding:12px 12px 30px!important}
+ body.elw-premium .arenaHero{padding:19px!important;border-radius:18px!important}
+ body.elw-premium .arenaHero h1{font-size:clamp(34px,8vw,45px)!important}
+ body.elw-premium[data-elw-section=simulacao] .bottomNav{margin-bottom:12px!important}
+}
+@media(max-width:370px){
+ body.elw-premium .elw-brand-name small{letter-spacing:.08em!important}
+ body.elw-premium .elw-brand-name{font-size:10px!important}
+ body.elw-premium .elw-account-action{padding:0 8px!important}
+}
+@media(prefers-reduced-motion:reduce){body.elw-premium *{animation:none!important;transition:none!important}}
