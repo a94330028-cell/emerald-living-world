@@ -1,5 +1,6 @@
 #!/bin/sh
 set -eu
+umask 022
 revision="${1:?missing release revision}"
 case "$revision" in
   ''|*[!0-9a-f]*) echo 'Invalid release revision' >&2; exit 1 ;;
@@ -12,10 +13,11 @@ wget -q -O /tmp/emerald-source.zip "$repo/a1691a2336b28c643eb3aa54c7551a0eff31d3
 wget -q -O /tmp/emerald-v308-overlay.zip "$repo/$revision/deploy/emerald-v308-overlay.zip"
 sha256sum -c <<'HASHES'
 c7e39749461b9810ead808ca43aa09708f1d5b6e1bc97cccb08c226cac48a2e5  /tmp/emerald-source.zip
-fd1de8772e76c61f8c858759f9bfb69f01f76482a70e04419f660169b89c99a0  /tmp/emerald-v308-overlay.zip
+8c121837b488472dc913aa5b61a943a4e7c7caedcf570d7d55771c0d907e1257  /tmp/emerald-v308-overlay.zip
 HASHES
 unzip -oq /tmp/emerald-source.zip -d /app
 unzip -oq /tmp/emerald-v308-overlay.zip -d /app
+su-exec node test -r /app/server/app.cjs
 
 export DATA_DIR="${DATA_DIR:-/data}"
 test "$DATA_DIR" = /data
@@ -36,7 +38,7 @@ if (!valid) {
 }
 CHECK_SAVE
 backup=/data/backup-before-3.0.8
-if [ ! -d "$backup" ]; then
+if [ ! -d "$backup" ]; then (
   umask 077
   snapshot=$(mktemp -d /data/.pre-308.XXXXXX)
   for save in world.json world.json.bak; do
@@ -44,7 +46,7 @@ if [ ! -d "$backup" ]; then
   done
   mv "$snapshot" "$backup"
   echo 'Backup de world.json preparado antes da versão 3.0.8.'
-fi
+); fi
 
 cd /app
 chmod 755 deploy/entrypoint.sh
