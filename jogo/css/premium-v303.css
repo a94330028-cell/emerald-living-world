@@ -1,0 +1,120 @@
+/* Emerald Living World — premium layer, 3.0.3. Does not modify gameplay elements. */
+:root{--premium-ink:#edfff4;--premium-muted:#a5c7bb;--premium-gold:#efce8a;--premium-stroke:rgba(152,242,197,.16)}
+html{scroll-padding-top:100px}
+body.elw-premium{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--elw-premium-radius:22px}
+body.elw-premium:not(.elw-lite){background-image:radial-gradient(circle at 12% 4%,rgba(46,149,112,.17),transparent 33%),radial-gradient(circle at 87% 12%,rgba(67,116,151,.15),transparent 30%),linear-gradient(180deg,#071514,#0b1c1c 48%,#071615)!important}
+.elw-premium-topbar,.elw-premium-topbar *{box-sizing:border-box}
+.elw-premium-topbar{position:sticky!important;top:0;z-index:10010!important;display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:79px;padding:11px clamp(16px,3vw,44px);border-bottom:1px solid rgba(130,210,168,.18);background:linear-gradient(105deg,rgba(6,27,26,.96),rgba(9,36,37,.96));backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 12px 33px rgba(0,0,0,.19);color:var(--premium-ink)}
+.elw-brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:inherit;flex-shrink:0}
+.elw-brand-icon{display:grid;place-items:center;position:relative;width:45px;height:45px;border-radius:14px;background:linear-gradient(140deg,#c6f6b4,#52ce9c 72%);box-shadow:0 0 27px rgba(92,215,151,.19);font-size:28px;line-height:1;color:#083229;font-weight:1000;font-family:Georgia,serif}
+.elw-brand-icon span{position:absolute;right:-4px;top:-6px;color:var(--premium-gold);font-size:15px;text-shadow:0 0 10px #09372d}
+.elw-brand-name{display:block;font-size:14px;font-weight:1000;letter-spacing:.14em;line-height:1.1}
+.elw-brand-name small{display:block;color:#8bdbb1;font-size:9px;letter-spacing:.34em;margin-top:5px}
+.elw-main-links{display:flex;align-items:center;gap:3px;flex:1;justify-content:center}
+.elw-main-links a{display:flex;align-items:center;min-height:42px;padding:0 14px;border-radius:12px;text-decoration:none;color:#b7cfc4;font-size:12px;font-weight:800;white-space:nowrap;border:1px solid transparent;transition:.2s}
+.elw-main-links a:hover,.elw-main-links a:focus-visible{color:#fff;background:rgba(148,242,197,.09);outline-color:#74dda4}
+.elw-main-links a[aria-current="page"]{border-color:rgba(150,236,178,.25);background:rgba(65,184,123,.16);color:#aaf6c6}
+.elw-top-actions{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.elw-top-status{display:flex;align-items:center;gap:7px;color:#a6d2b4;font-size:9px;font-weight:900;letter-spacing:.13em;white-space:nowrap}
+.elw-top-status i,.elw-pulse-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#5ce5a0;box-shadow:0 0 0 4px rgba(64,223,140,.1)}
+.elw-account-action{display:inline-flex;align-items:center;gap:7px;min-height:42px;padding:0 15px;border-radius:13px;background:linear-gradient(135deg,#bff5ba,#66d8a4);color:#0b3327!important;text-decoration:none;font-weight:900;font-size:12px;white-space:nowrap}
+.elw-account-action:hover{filter:brightness(1.07)}
+.elw-lite-switch{appearance:none;cursor:pointer;border:1px solid rgba(157,222,188,.2);background:rgba(255,255,255,.04);color:#cceadb;border-radius:12px;min-height:42px;min-width:42px;font-size:19px}
+.elw-premium-heading{position:relative;display:flex;gap:16px;align-items:center;justify-content:space-between;overflow:hidden;margin:10px 0 22px;padding:22px clamp(17px,3vw,30px);border:1px solid rgba(169,229,191,.2);border-radius:24px;background:radial-gradient(circle at 94% 5%,var(--elw-glow),transparent 50%),linear-gradient(125deg,#14352f,#0a2529 70%);box-shadow:0 14px 35px rgba(0,15,16,.23)}
+.elw-premium-heading::after{content:"";width:190px;height:190px;position:absolute;right:9%;top:-130px;border-radius:50%;background:var(--elw-accent);opacity:.07;filter:blur(22px);pointer-events:none}
+.elw-premium-eyebrow{color:var(--elw-accent-strong);font-size:10px;letter-spacing:.2em;font-weight:900}
+.elw-premium-heading h2{margin:9px 0 6px!important;font-size:clamp(21px,3vw,32px)!important;letter-spacing:-.04em;line-height:1.15}
+.elw-premium-heading p{margin:0;color:#b7d3c6;font-size:13px}
+.elw-premium-heading-actions{display:flex;gap:9px;align-items:center;flex-shrink:0}
+.elw-premium-heading-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:41px;padding:8px 14px;border:1px solid rgba(144,226,179,.2);border-radius:12px;background:rgba(9,32,32,.68);color:#e4ffed;text-decoration:none;font-size:12px;font-weight:800}
+.elw-premium-heading-actions a:last-child{background:rgba(80,180,115,.19)}
+/* Homepage: editorial game launcher */
+body[data-elw-section="hub"].elw-premium .portal-header{display:none}
+body.elw-premium .portal-main{max-width:1300px;padding-left:clamp(14px,3vw,36px);padding-right:clamp(14px,3vw,36px)}
+body.elw-premium .portal-hero{min-height:475px;position:relative;gap:clamp(20px,4vw,56px);padding:76px 0 56px}
+body.elw-premium .hero-copy h1{font-size:clamp(42px,5.8vw,82px);letter-spacing:-.065em;line-height:1.02}
+body.elw-premium .hero-copy h1 em{background:linear-gradient(120deg,#b8f8ba,#5adcb1 60%,#d8e9ad);color:transparent;background-clip:text;-webkit-background-clip:text}
+body.elw-premium .hero-copy p{font-size:clamp(14px,1.4vw,16px);max-width:550px}
+body.elw-premium .portal-hero .eyebrow{display:inline-flex;padding:10px 14px;border:1px solid rgba(143,232,185,.23);border-radius:999px;background:rgba(30,81,65,.4);font-size:10px}
+body.elw-premium .hero-art{padding:12px}
+body.elw-premium .art-inner{transform:rotate(1.5deg);border-radius:28px;border:1px solid rgba(187,255,194,.5);box-shadow:0 0 0 8px rgba(119,240,170,.04),0 40px 100px #00150e90}
+body.elw-premium .art-inner img{min-height:260px;object-fit:cover}
+body.elw-premium .art-label{letter-spacing:.13em;box-shadow:0 9px 24px #001b13}
+.elw-premium-hero-mark{position:absolute;bottom:17px;left:0;color:#87b6a2;font-size:10px;font-weight:900;letter-spacing:.21em}
+.elw-premium-overview{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:0;align-items:center;margin:8px 0 52px;border:1px solid rgba(146,229,186,.22);border-radius:22px;background:linear-gradient(110deg,rgba(22,59,54,.92),rgba(10,34,37,.9));box-shadow:0 20px 46px #03171254;overflow:hidden}
+.elw-premium-overview>div{display:flex;flex-direction:column;justify-content:center;min-height:105px;padding:22px 24px;border-right:1px solid rgba(174,243,202,.1)}
+.elw-premium-overview>div:last-child{border-right:0}
+.elw-premium-overview>div:first-child{position:relative;padding-left:39px}
+.elw-premium-overview .elw-pulse-dot{position:absolute;left:21px;top:25px}
+.elw-premium-overview strong{color:#e4fff1;font-size:23px;line-height:1.2;font-weight:1000}
+.elw-premium-overview>div:first-child strong{font-size:12px;letter-spacing:.13em;color:#c6f6d2}
+.elw-premium-overview small{color:#a0c6b6;font-size:11px;line-height:1.45;margin-top:6px}
+body.elw-premium .portal-grid{gap:17px}
+body.elw-premium .world-card{border-radius:23px;min-height:255px;padding:23px;background:radial-gradient(circle at 92% 11%,color-mix(in srgb,var(--card) 15%,transparent),transparent 60%),linear-gradient(160deg,#142e2e,#0c2328 85%);box-shadow:0 15px 35px rgba(0,17,18,.13)}
+body.elw-premium .world-card::before{content:"";position:absolute;right:-35px;top:-50px;width:130px;height:130px;border-radius:35%;background:var(--card);opacity:.05;transform:rotate(20deg)}
+body.elw-premium .world-card:hover,body.elw-premium .world-card:focus-visible{box-shadow:0 20px 45px #00170e88,0 0 30px color-mix(in srgb,var(--card) 11%,transparent)}
+body.elw-premium .world-card .card-icon{font-size:38px}
+body.elw-premium .world-card h3{font-size:18px}
+body.elw-premium .world-card p{font-size:12px}
+body.elw-premium .profile-band{border-radius:26px;box-shadow:0 18px 54px #00141066}
+body.elw-premium .cta.primary{border:1px solid #daffcb;background:linear-gradient(120deg,#d0f7b4,#5adab4);color:#073125}
+body.elw-premium .cta.secondary{background:#153734;border:1px solid rgba(156,245,188,.28)}
+/* Game areas: every section keeps its own accent while sharing visual language. */
+body.elw-premium[data-elw-section="arena"] .elw-premium-heading{background:radial-gradient(circle at 95% 0%,rgba(226,173,55,.18),transparent 44%),linear-gradient(135deg,#312821,#171f23)}
+body.elw-premium[data-elw-section="frontier"] .elw-premium-heading{background:radial-gradient(circle at 90% 0%,rgba(160,105,227,.22),transparent 50%),linear-gradient(135deg,#272038,#151b30)}
+body.elw-premium[data-elw-section="mapas"] .elw-premium-heading{background:radial-gradient(circle at 92% 0%,rgba(71,192,173,.18),transparent 50%),linear-gradient(135deg,#133c42,#11272d)}
+body.elw-premium[data-elw-section="jornada"] .elw-premium-heading{background:radial-gradient(circle at 92% 0%,rgba(92,187,222,.18),transparent 50%),linear-gradient(135deg,#163245,#132b2e)}
+body.elw-premium[data-elw-section="pokedex"] .elw-premium-heading{background:radial-gradient(circle at 92% 0%,rgba(171,216,111,.17),transparent 50%),linear-gradient(135deg,#283f2b,#152a27)}
+body.elw-premium :is(a,button,input,select,textarea):focus-visible{outline:2px solid var(--elw-accent)!important;outline-offset:3px}
+body.elw-premium .elw-dock{border-color:rgba(172,246,196,.25)}
+body.elw-premium .elw-menu{border-color:rgba(157,230,190,.25)}
+/* Hide desktop duplicate dock: top navigation carries main modes, floating "Mais" still available in dock. */
+@media(min-width:1121px){
+ body.elw-premium .elw-dock{left:auto;right:22px;transform:none;bottom:20px;width:auto;min-height:54px;border-radius:18px;padding:5px}
+ body.elw-premium .elw-dock>a{display:none}
+ body.elw-premium .elw-dock button{padding:7px 17px;flex-direction:row}
+ body.elw-premium .elw-dock .elw-label{font-size:12px}
+ body.elw-premium .elw-menu{left:auto;right:22px;transform:none;width:min(480px,calc(100% - 40px))}
+}
+@media(max-width:1120px){
+ .elw-main-links{gap:0}
+ .elw-main-links a{padding:0 9px;font-size:11px}
+ .elw-top-status{display:none}
+ .elw-top-actions{gap:6px}
+}
+@media(max-width:900px){
+ .elw-premium-topbar{min-height:66px;padding:9px 15px}
+ .elw-main-links{display:none}
+ .elw-brand-icon{width:40px;height:40px}
+ .elw-brand-name{font-size:12px}
+ .elw-account-action{min-height:40px}
+ .elw-lite-switch{min-height:40px;min-width:40px}
+ .elw-premium-overview{grid-template-columns:repeat(3,1fr)}
+ .elw-premium-overview>div:first-child{grid-column:1/-1;border-bottom:1px solid rgba(174,243,202,.1);min-height:72px}
+ body.elw-premium .portal-hero{min-height:unset}
+}
+@media(max-width:620px){
+ body.elw-premium .portal-hero{padding:42px 0 35px;gap:18px}
+ body.elw-premium .hero-copy h1{font-size:clamp(40px,9vw,53px)}
+ body.elw-premium .hero-art{padding:4px 5px;min-height:unset}
+ body.elw-premium .art-inner img{min-height:0}
+ .elw-premium-hero-mark{display:none}
+ .elw-premium-overview{margin:5px 0 34px}
+ .elw-premium-overview>div{min-height:82px;padding:13px 10px;text-align:center}
+ .elw-premium-overview>div:first-child{text-align:left}
+ .elw-premium-overview strong{font-size:21px}
+ .elw-premium-overview small{font-size:10px}
+ body.elw-premium .world-card{min-height:235px;padding:16px}
+ body.elw-premium .world-card h3{font-size:15px}
+ .elw-premium-heading{padding:17px 15px;border-radius:17px;flex-direction:column;align-items:stretch;margin:5px 0 16px}
+ .elw-premium-heading-actions{align-self:stretch}
+ .elw-premium-heading-actions a{flex:1}
+ .elw-brand-name{letter-spacing:.08em}
+ .elw-brand-name small{letter-spacing:.21em}
+ .elw-account-action{padding:0 10px}
+ .elw-account-action span{display:none}
+}
+body.elw-lite .elw-premium-topbar,body.elw-lite .elw-dock,body.elw-lite .elw-menu{backdrop-filter:none;-webkit-backdrop-filter:none}
+body.elw-lite .ambient,body.elw-lite::before,body.elw-lite::after{display:none!important}
+body.elw-lite *,body.elw-lite *::before,body.elw-lite *::after{animation:none!important;transition:none!important;filter:none!important}
+@media(prefers-reduced-motion:reduce){body.elw-premium *,body.elw-premium *::before,body.elw-premium *::after{animation:none!important;transition:none!important}}
