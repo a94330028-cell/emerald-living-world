@@ -1,0 +1,9 @@
+/* Final small-layout safeguards */
+body.elw-premium[data-elw-section=simulacao] .brandHeader{display:none!important}
+body.elw-premium[data-elw-section=simulacao] .welcomePanel{margin-top:0!important}
+body.elw-premium[data-elw-section=simulacao] #gamePage{scroll-margin-top:85px!important}
+body.elw-premium[data-elw-section=simulacao] .navActions{box-sizing:border-box!important}
+body.elw-premium[data-elw-section=simulacao] .bottomNav a{text-decoration:none!important}
+body.elw-premium .pokedexDevice,body.elw-premium .pokedexPanel{max-width:100%!important;min-width:0!important}
+body.elw-premium .elw-brand:focus-visible{outline:2px solid #9de9bd;outline-offset:4px}
+body.elw-premium .elw-premium-heading,body.elw-premium .portal-hero{scroll-margin-top:83px}
