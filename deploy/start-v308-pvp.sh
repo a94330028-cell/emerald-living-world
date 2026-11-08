@@ -15,7 +15,7 @@ wget -q -O /tmp/emerald-arena-pvp.zip "$repo/$revision/deploy/arena-pvp.zip"
 sha256sum -c <<'HASHES'
 c7e39749461b9810ead808ca43aa09708f1d5b6e1bc97cccb08c226cac48a2e5  /tmp/emerald-source.zip
 8c121837b488472dc913aa5b61a943a4e7c7caedcf570d7d55771c0d907e1257  /tmp/emerald-v308-overlay.zip
-96aad721ce5f0e516f00cd6629fe88ad77a86df5e5401a8ebb6563972e51a84a  /tmp/emerald-arena-pvp.zip
+5dea017aaf8fea46af69c582cc65f7d3cf2849b0c91a585dc5b0b2a4ed10ae4e  /tmp/emerald-arena-pvp.zip
 HASHES
 unzip -oq /tmp/emerald-source.zip -d /app
 unzip -oq /tmp/emerald-v308-overlay.zip -d /app
